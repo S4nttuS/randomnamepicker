@@ -1,12 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState, useEffect } from "react";
 import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import PlayerNames from "./PlayerNames";
 
 export default function App() {
+  
+  const [inputList, setInputList] = useState([
+    { playerName: "player A" },
+]);
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+
+        <PlayerNames 
+          setInputList={setInputList}
+          inputList={inputList}
+        />
+      <View style = {styles.startGameBtn}>
+        <TouchableOpacity>
+          <Text style = {styles.startGameText}>Start game</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -18,4 +34,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  startGameBtn: {
+    width: 150,
+    height: 40,
+    backgroundColor: "green",
+    borderWidth: 3,
+    borderRadius: 6,
+    borderColor: 'black',
+    marginTop: 30
+  },
+  startGameText:{
+    fontStyle: 'bold',
+    textAlign: 'center',
+    justifyContent: 'center',
+    fontSize: 22,
+
+  }
 });
