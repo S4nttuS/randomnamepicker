@@ -1,2 +1,2 @@
 # randomnamepicker
-Select a random name at semi-random intervals
+Selects a random name at semi-random intervals
