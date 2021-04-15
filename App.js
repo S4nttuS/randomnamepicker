@@ -8,6 +8,7 @@ export default function App() {
   
   const [inputList, setInputList] = useState([
     { playerName: "player A" },
+    { playerName: "player B" },
 ]);
 
   return (
