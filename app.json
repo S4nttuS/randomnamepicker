@@ -1,0 +1,12 @@
+{
+  "name": "randomnamepicker",
+  "displayName": "randomnamepicker",
+  "expo": {
+    "name": "randomnamepicker",
+    "slug": "randomnamepicker",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
